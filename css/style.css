@@ -1,1 +1,25 @@
-/*# sourceMappingURL=style.css.map */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #0b1f51;
+}
+
+.l-header {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  height: 6.6rem;
+  padding: 0.04rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 3.3rem;
+  z-index: 10;
+}/*# sourceMappingURL=style.css.map */
