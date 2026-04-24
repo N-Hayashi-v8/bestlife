@@ -1,5 +1,15 @@
 # 作業ログ
 
+## 2026-04-24
+
+- `scss/layout/_header.scss`：`l-header__logo` に `padding-left: 15rem` 追加
+- `scss/object/component/_nav.scss` 新規作成（c-nav / c-nav__item / c-nav__link / c-nav__link--cta）
+- `scss/object/component/_btn.scss` 新規作成（c-btn / c-btn--outline、幅30.4rem・高さ6.5rem・角丸3.25rem）
+- `scss/object/component/_section-title.scss` 新規作成（3rem・装飾線 `::before` / 幅4.65rem・高さ1px）
+- `scss/layout/_inner.scss` 新規作成（l-inner、max-width: 116.4rem / margin: 0 auto）
+- `index.html`：p-about / p-service / p-contact / p-cta / l-footer に `l-inner` 適用
+- `scss/style.scss`：nav / btn / section-title / inner の `@use` 追記
+
 ## 2026-04-23
 
 - SCSS着手

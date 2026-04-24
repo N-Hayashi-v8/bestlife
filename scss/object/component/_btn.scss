@@ -1,0 +1,20 @@
+@use "../../foundation/base" as b;
+
+.c-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30.4rem;
+    height: 6.5rem;
+    padding: 0 2.4rem;
+    border: 1px solid b.$color-primary;
+    border-radius: 3.25rem;
+    background-color: transparent;
+    color: b.$color-primary;
+    text-decoration: none;
+
+    &--outline{
+        border-color: b.$color-white;
+        color: b.$color-white;
+    }
+}

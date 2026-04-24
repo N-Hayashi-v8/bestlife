@@ -22,4 +22,65 @@ body {
   background-color: #ffffff;
   border-radius: 3.3rem;
   z-index: 10;
+}
+.l-header__logo {
+  padding-left: 15rem;
+}
+
+.l-inner {
+  max-width: 116.4rem;
+  margin: 0 auto;
+}
+
+.c-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  list-style: none;
+}
+.c-nav__link {
+  padding: 0.4rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0b1f51;
+  text-decoration: none;
+}
+.c-nav__link--cta {
+  padding: 1.2rem 3rem;
+  background-color: #0b1f51;
+  color: #ffffff;
+  border-radius: 4rem;
+}
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30.4rem;
+  height: 6.5rem;
+  padding: 0 2.4rem;
+  border: 1px solid #0b1f51;
+  border-radius: 3.25rem;
+  background-color: transparent;
+  color: #0b1f51;
+  text-decoration: none;
+}
+.c-btn--outline {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.c-section-title {
+  padding-left: 12.5rem;
+  font-size: 3rem;
+  line-height: 1.6666666667;
+  color: #0b1f51;
+}
+.c-section-title::before {
+  content: "";
+  display: block;
+  width: 4.65rem;
+  height: 1px;
+  margin-bottom: 1.1rem;
+  background-color: #0b1f51;
 }/*# sourceMappingURL=style.css.map */

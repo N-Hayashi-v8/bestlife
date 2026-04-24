@@ -1,0 +1,23 @@
+@use "../../foundation/base" as b;
+
+.c-nav{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    list-style: none;
+
+    &__link{
+        padding: 0.4rem 1.6rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: b.$color-primary;
+        text-decoration: none;
+
+        &--cta{
+            padding: 1.2rem 3rem;
+            background-color: b.$color-primary;
+            color: b.$color-white;
+            border-radius: 4rem;
+        }
+    }
+}

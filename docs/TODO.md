@@ -2,8 +2,7 @@
 
 ## 次回すぐやる
 
-- [ ] `scss/object/component/_nav.scss` 作成（c-nav / c-nav__item / c-nav__link / c-nav__link--cta / c-nav--footer）
-- [ ] `scss/style.scss` に component の `@use` 追記
+- [ ] `_mv.scss`（ヘッダー画像・キャッチフレーズ・ニュースリスト絡みで複雑）
 
 ## SCSS 実装予定
 
@@ -13,9 +12,7 @@
 
 ### Component
 
-- [ ] `_btn.scss`（c-btn / c-btn--outline）
 - [ ] `_news-list.scss`
-- [ ] `_section-title.scss`（複数セクションで共通）
 - [ ] `_service-card.scss`（矢印は `::after` で実装）
 - [ ] `_location-card.scss`
 

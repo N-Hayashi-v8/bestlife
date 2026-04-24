@@ -9,10 +9,14 @@
 @use "layout/header";
 @use "layout/footer";
 @use "layout/main";
+@use "layout/inner";
 
 // ==========================================================================
 // Object - Component
 // ==========================================================================
+@use "object/component/nav";
+@use "object/component/btn";
+@use "object/component/section-title";
 
 // ==========================================================================
 // Object - Project
