@@ -1,0 +1,31 @@
+@use "../../foundation/base" as b;
+
+.c-news-list{
+    list-style: none;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 1rem 0;
+        gap: 2rem;
+    }
+
+    &__label{
+        color: b.$color-primary;
+        font-weight: 700;
+        font-size: 1.6rem;
+        flex-shrink: 0;
+    }
+
+    &__date{
+        color: b.$color-gray;
+        font-size: 1.6rem;
+        flex-shrink: 0;
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        color: b.$color-primary;
+    }
+}

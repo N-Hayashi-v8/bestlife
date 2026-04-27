@@ -2,23 +2,19 @@
 
 ## 次回すぐやる
 
-- [ ] `_mv.scss`（ヘッダー画像・キャッチフレーズ・ニュースリスト絡みで複雑）
+- [ ] `_footer.scss`（l-footer / c-nav--footer との連携）
 
 ## SCSS 実装予定
 
 ### Layout
 
-- [ ] `_footer.scss`（l-footer / c-nav--footer との連携）
-
 ### Component
 
-- [ ] `_news-list.scss`
 - [ ] `_service-card.scss`（矢印は `::after` で実装）
 - [ ] `_location-card.scss`
 
 ### Project
 
-- [ ] `_mv.scss`
 - [ ] `_about.scss`
 - [ ] `_service.scss`
 - [ ] `_contact.scss`

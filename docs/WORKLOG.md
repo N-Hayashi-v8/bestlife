@@ -1,5 +1,19 @@
 # 作業ログ
 
+## 2026-04-27
+
+- `scss/object/project/_mv.scss` 新規作成
+  - `p-mv`：`position: relative` / `::before` で左グラデーション（白→透明）
+  - `p-mv__img`：`width: 100%` / `display: block`
+  - `p-mv__catch`：`position: absolute` でキャッチフレーズ配置
+  - `p-mv__phrase` / `p-mv__phrase-en`：フォントサイズ・色
+  - `p-mv__news`：`position: absolute`・左下固定・白背景・`border-top-right-radius`・flex縦中央
+  - `p-mv__news-more`：右寄せ・`::after` 擬似要素でアンダーライン（`position: absolute` + `translateX(-50%)` で中央配置）
+- `scss/object/component/_news-list.scss` 新規作成（`c-news-list`：flex横並び・`__label` / `__date` / `__text`）
+- `scss/foundation/_base.scss`：`$color-gray: #A2A2A2` 追加
+- `scss/style.scss`：mv・news-list の `@use` 追記
+- `index.html`：`c-news-list__more` → `p-mv__news-more`（BEM修正）
+
 ## 2026-04-24
 
 - `scss/layout/_header.scss`：`l-header__logo` に `padding-left: 15rem` 追加

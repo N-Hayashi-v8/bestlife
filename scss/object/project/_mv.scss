@@ -1,0 +1,76 @@
+@use "../../foundation/base" as b;
+
+.p-mv{
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,0.75), transparent);
+        z-index: 1;
+    }
+
+    &__catch{
+        position: absolute;
+        left: 21rem;
+        top: 28.8rem;
+        z-index: 10;
+    }
+
+    &__phrase{
+        font-size: 6.1rem;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: center;
+        color: b.$color-primary;
+    }
+
+    &__phrase-en{
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: center;
+        color: b.$color-primary;
+    }
+
+    &__news{
+        position: absolute;
+        width: 79rem;
+        height: 31rem;
+        bottom: 0;
+        left: 0;
+        background-color: b.$color-white;
+        border-top-right-radius: 3rem;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 4rem;
+    }
+
+    &__news-more{
+        align-self: flex-end;
+        position: relative;
+        font-size: 1.6rem;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 13rem;
+            height: 1px;
+            background: b.$color-primary;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__img{
+        display: block;
+        width: 100%;
+    }
+}
