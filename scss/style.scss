@@ -18,11 +18,17 @@
 @use "object/component/btn";
 @use "object/component/section-title";
 @use "object/component/news-list";
+@use "object/component/service-card";
+@use "object/component/location-card";
 
 // ==========================================================================
 // Object - Project
 // ==========================================================================
 @use "object/project/mv";
+@use "object/project/about";
+@use "object/project/service";
+@use "object/project/contact";
+@use "object/project/cta";
 
 
 // ==========================================================================

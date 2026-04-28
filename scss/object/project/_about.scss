@@ -1,0 +1,61 @@
+@use "../../foundation/base" as b;
+
+.p-about{
+    position: relative;
+    margin-top: 8rem;
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        height: 43.7rem;
+        padding: 0 8rem;
+        gap: 13.2rem;
+        background-color: b.$color-bg-light;
+        border-radius: 3rem 3rem 0 0;
+        overflow: hidden;
+    }
+
+    &__lead{
+        flex: 0 0 36rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    &__heading{
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.75;
+    }
+
+    &__body{
+        flex: 0 0 51.2rem;
+    }
+
+    &__text{
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    &__image{
+        display: block;
+        width: 100%;
+        max-width: 116.4rem;
+        margin: 0 auto;
+        height: 27.9rem;
+        object-fit: cover;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 116.4rem;
+        height: 27.9rem;
+        background: linear-gradient(to bottom, b.$color-bg-light, transparent);
+        pointer-events: none;
+    }
+}

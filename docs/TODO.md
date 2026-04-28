@@ -10,22 +10,15 @@
 
 ### Component
 
-- [ ] `_service-card.scss`（矢印は `::after` で実装）
-- [ ] `_location-card.scss`
-
 ### Project
-
-- [ ] `_about.scss`
-- [ ] `_service.scss`
-- [ ] `_contact.scss`
-- [ ] `_cta.scss`
 
 ## 保留・仮置き
 
-- [ ] p-contact 住所データ差し替え（なんば3号店・那覇の正しい住所）
-- [ ] マップ埋め込み（Google Maps iframe）
+- [ ] p-cta タイトル文言の見直し（現状「事業内容」になっている）
 
 ## メモ
 
-- 事業内容カードの矢印は CSS疑似要素（`::after`）で実装する方針
-- `c-section-title` は事業内容・当社へのご連絡など複数セクションで共通利用
+- 事業内容カードの矢印は CSS疑似要素（`::before` + 親div）で実装済
+- `c-section-title` は装飾線・フォントのみ持ち、`padding-left` は使用先の Project 側で個別指定する方針
+- ボタン・カードの矢印は `currentColor` で色を継承する方針（outline/ダーク背景でも自動追従）
+- マップは `https://maps.google.com/maps?q=...&output=embed` の iframe で埋め込み（API キー不要）

@@ -1,5 +1,41 @@
 # 作業ログ
 
+## 2026-04-28
+
+- `scss/object/project/_about.scss` 新規作成
+  - `p-about__inner`：flex 2カラム（lead 36rem / body 51.2rem）・背景 `$color-bg-light`・border-radius 上2隅のみ・overflow hidden
+  - `p-about__image`：max-width 116.4rem 中央寄せ・object-fit cover
+  - `p-about::after`：画像エリアにグラデーションオーバーレイ（`$color-bg-light` → transparent）・画像幅に揃える
+- `scss/object/component/_btn.scss`：矢印追加
+  - `::after`（横線 2.4rem）+ `::before`（斜線 1rem を rotate 45deg）の2擬似要素構成
+  - `transform-origin: right center` で軸固定、ホバーで両方が `translateX(0.5rem)`
+  - `currentColor` 利用で outline 派生も自動で白矢印
+- `scss/foundation/_base.scss`：`$color-about-bg` → `$color-bg-light` にリネーム（汎用化）
+- `scss/object/project/_service.scss` 新規作成
+  - `p-service`：背景 `$color-bg-light` 全幅
+  - `p-service__grid`：grid 2列×4行・カード固定幅 55.4rem・column-gap 5.6rem
+- `scss/object/component/_service-card.scss` 新規作成
+  - flex 横並び（image 17.4rem / body 38rem）、背景 `$color-card-bg`、border-radius
+  - `__arrow` 自身を横線にし、`::before` で斜め線を保持
+  - `:hover` で `__arrow` 全体を translateX → 中の `::before` も追従
+- `scss/object/project/_contact.scss` 新規作成
+  - `p-contact__inner`：背景 `$color-bg-light`・border-radius・padding 6rem 8rem
+  - `p-contact__main`：flex 横並び（map 44.4×30.4rem + info）
+  - `p-contact__grid`：grid 3列・カード固定幅 27.4rem・`justify-content: space-between`
+- `scss/object/component/_location-card.scss` 新規作成
+  - 縦並び（map 27.4×18.7rem + name + address）・border-radius + overflow hidden
+- `index.html`：`p-contact` 配下を更新
+  - `<div class="l-inner">` → `<div class="p-contact__inner l-inner">`
+  - 各 `__map` 配下に Google Maps iframe を挿入（皇居・大阪城・名古屋城・首里城）
+  - 3号店・那覇の住所データを差し替え
+- `scss/object/project/_cta.scss` 新規作成
+  - 全幅ダーク背景（`$color-footer-bg`）・color: white・padding 8rem 0
+  - `__inner`：text-align center（テキスト・ボタン中央寄せ）
+  - `__title`：text-align left で上書き、装飾線 `::before` も左寄せ
+- `scss/object/component/_section-title.scss`：`padding-left: 12.5rem` を削除（責任を Project 側へ移譲）
+- `scss/object/project/_service.scss`：c-section-title に対する `padding-left: 12.5rem` を追加（既存の見た目維持）
+- `scss/style.scss`：service / service-card / contact / location-card / cta の `@use` 追記
+
 ## 2026-04-27
 
 - `scss/object/project/_mv.scss` 新規作成

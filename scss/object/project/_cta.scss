@@ -1,0 +1,34 @@
+@use "../../foundation/base" as b;
+
+.p-cta{
+    margin-top: 8rem;
+    padding: 8rem 0;
+    background-color: b.$color-footer-bg;
+    color: b.$color-white;
+
+    &__inner{
+        text-align: center;
+    }
+
+    &__title{
+        text-align: left;
+        font-size: 3rem;
+        line-height: calc(50 / 30);
+        margin-bottom: 4rem;
+
+        &::before{
+            content: "";
+            display: block;
+            width: 4.65rem;
+            height: 1px;
+            margin: 0 0 1.1rem;
+            background-color: currentColor;
+        }
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-bottom: 4rem;
+    }
+}
