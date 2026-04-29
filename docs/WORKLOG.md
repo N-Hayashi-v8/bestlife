@@ -1,5 +1,25 @@
 # 作業ログ
 
+## 2026-04-29
+
+- `scss/layout/_footer.scss` 実装
+  - `l-footer`：背景 `$color-footer-bg`・color white・padding 6rem 0 3rem（p-cta と連続するダーク帯）
+  - `__upper`：flex space-between でロゴと nav を両端配置
+  - `__address`：`<address>` の italic を解除（`font-style: normal`）
+  - `__shop-name` / `__address-detail` / `__bottom`：text-align・font-size 個別調整
+- `scss/object/component/_nav.scss`：`&--footer` 派生追加
+  - flex-wrap・gap 1.6rem 2.4rem、配下の `.c-nav__link` を白文字・font-weight 400 に上書き
+  - 派生内では `&__link` ではなくフルクラス名 `.c-nav__link` で書く（BEM の連結ミス回避）
+- 全体リファクタ
+  - `index.html`：`p-contact__main-map/main-info` → `p-contact__map/info`（BEM の二重ハイフン解消）
+  - `index.html`：`p-cta__title` → `c-section-title`（重複定義の解消）
+  - `_cta.scss`：`__title` ブロック削除、`.c-section-title` への上書き（text-align left / margin-bottom）に置換
+  - `_header.scss`：`padding: 0.04rem` 削除、`__logo` の `padding-left: 15rem` を親 `.l-header` に移譲
+  - `_section-title.scss`：`color: $color-primary` 削除（body から継承）、`::before` の background を `currentColor` 化 → ダーク背景で自動追従
+  - `_contact.scss`：`.c-section-title { padding-left: 4.5rem }` 追加（p-service の見出し位置と揃える、`12.5rem - 8rem`）
+  - 住所フォント統一：`l-footer__address-detail` 1.6rem→1.4rem、`c-location-card__address` 1.3rem→1.4rem
+  - `style.scss`：未使用の `@use "layout/main"` を撤去
+
 ## 2026-04-28
 
 - `scss/object/project/_about.scss` 新規作成

@@ -20,4 +20,15 @@
             border-radius: 4rem;
         }
     }
+
+    &--footer{
+        flex-wrap: wrap;
+        gap: 1.6rem 2.4rem;
+
+        .c-nav__link{
+            color: b.$color-white;
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+    }
 }

@@ -1,2 +1,47 @@
 // Layout - Footer
 // ==========================================================================
+
+@use "../foundation/base" as b;
+
+.l-footer{
+    background-color: b.$color-footer-bg;
+    color: b.$color-white;
+    padding: 6rem 0 3rem;
+
+    &__upper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+    &__logo{
+        img{
+            display: block;
+            width: 16rem;
+        }
+    }
+
+    &__address{
+        font-style: normal;
+        margin-bottom: 4rem;
+    }
+
+    &__shop-name{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+    }
+
+    &__address-detail{
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+
+    &__bottom{
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: b.$color-white;
+    }
+}

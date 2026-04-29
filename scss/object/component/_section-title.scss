@@ -3,7 +3,6 @@
 .c-section-title{
     font-size: 3rem;
     line-height: calc(50 / 30);
-    color: b.$color-primary;
 
     &::before{
         content: "";
@@ -11,6 +10,6 @@
         width: 4.65rem;
         height: 1px;
         margin-bottom: 1.1rem;
-        background-color: b.$color-primary;
+        background-color: currentColor;
     }
 }

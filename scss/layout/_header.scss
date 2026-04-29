@@ -9,15 +9,11 @@
     left: 3rem;
     right: 3rem;
     height: 6.6rem;
-    padding: 0.04rem;
+    padding-left: 15rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: b.$color-white;
     border-radius: 3.3rem;
     z-index: 10;
-
-    &__logo{
-        padding-left: 15rem;
-    }
 }
