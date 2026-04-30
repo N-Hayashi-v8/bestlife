@@ -1,5 +1,29 @@
 # 作業ログ
 
+## 2026-04-30
+
+- `pages/aboutus.html` 新規作成（会社案内ページ）
+  - `index.html` をベースに `pages/` 配下へ配置
+  - 各種パス調整（`../` で1階層上へ）：CSS / ロゴ画像 / HOMEリンク
+  - `<main>` タグ補完
+- HTMLパーツ配置（クラス名なしで全セクション配置 → 後でまとめて命名）
+  - p-mv（About US / 会社案内）
+  - メッセージ（リード文 image+text）
+  - 01/02 特徴ブロック
+  - Philosophy（企業理念）
+  - 会社概要（dl/dt/dd）
+  - 事業所一覧（3店舗 × 住所+map+iframe）
+  - p-cta（流用）
+- 構造リファクタ
+  - 事業所一覧：div ネストの繰り返し → `<ul>` / `<li>` 構成、住所部は `<address>` 化
+  - メッセージセクション：1つの `<section>` 内に「リード」+「01/02」が同居 → 2セクションに分割（`p-message` / `p-features`）
+  - 01/02 の `<h2>` → `<span>` に変更（番号は装飾扱い、本来の見出しは `<h3>` のキャッチフレーズ）
+- クラス命名（FLOCSS / BEM）
+  - Project: `p-message` / `p-features` / `p-philosophy` / `p-company` / `p-offices`（index.html の既存名と衝突回避）
+  - Component: `c-feature`（01/02 カードを再利用可能パーツとして切り出し）
+  - 既存 `c-section-title` を「会社概要」「事業所一覧」の見出しに流用
+  - `p-company` の dl 行ラップ用に `__row` 命名（HTML5 で `<dl>` 直下の `<div>` は許可）
+
 ## 2026-04-29
 
 - `scss/layout/_footer.scss` 実装
