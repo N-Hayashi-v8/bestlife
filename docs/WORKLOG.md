@@ -1,5 +1,24 @@
 # 作業ログ
 
+## 2026-05-01
+
+- aboutus の `p-mv` を `p-page-header` として独立（下層ページ共通の見出し帯として再利用前提）
+  - `pages/aboutus.html`：`p-mv` 系クラスを `p-page-header` 系に置換
+    - `p-mv__phrase` → `p-page-header__title`（ページタイトル本体・英字）
+    - `p-mv__phrase-en` → `p-page-header__subtitle`（日本語サブ）
+    - `p-mv__catch` / `p-mv__img` → `p-page-header__catch` / `p-page-header__img`
+  - `scss/object/project/_page-header.scss` 新規作成
+    - `::before` 左グラデ・`__catch` の絶対配置を `p-mv` から踏襲、news 系は持ち込まず
+    - `__title` 5rem / `__subtitle` 3rem、`__catch` 位置 `left: 38.4rem / top: 18rem`
+- `scss/object/project/_message.scss` 新規作成（`@use` のみ、実装は次回）
+- `p-features` / `c-feature` 実装
+  - `scss/object/project/_features.scss`：`padding 6rem 0`、`__inner` flex space-between gap 5.6rem
+  - `scss/object/component/_feature.scss`：カード幅 55.4rem・padding 3rem 4rem 4rem・`border-radius 1rem`
+    - `__num` を `display: block` 化して `border-bottom` でカード幅いっぱいの区切り線
+    - `__text` に `-webkit-line-clamp: 4` で本文4行制限（`display: -webkit-box` + `-webkit-box-orient: vertical` + `overflow: hidden`）
+  - 背景 `$color-bg-light` 適用に伴い border は削除（二重表示回避）
+- `scss/style.scss` に `@use` 追記：page-header / message / features（Project）、feature（Component）
+
 ## 2026-04-30
 
 - `pages/aboutus.html` 新規作成（会社案内ページ）

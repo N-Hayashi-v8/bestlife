@@ -257,6 +257,35 @@ body {
   line-height: 1.7;
 }
 
+.c-feature {
+  width: 55.4rem;
+  padding: 3rem 4rem 4rem;
+  background-color: #f6f6f2;
+  border-radius: 1rem;
+}
+.c-feature__num {
+  display: block;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #A2A2A2;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+.c-feature__title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+.c-feature__text {
+  font-size: 1.4rem;
+  line-height: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .p-mv {
   position: relative;
 }
@@ -320,6 +349,44 @@ body {
   transform: translateX(-50%);
 }
 .p-mv__img {
+  display: block;
+  width: 100%;
+}
+
+.p-page-header {
+  position: relative;
+}
+.p-page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.75), transparent);
+  z-index: 1;
+}
+.p-page-header__catch {
+  position: absolute;
+  left: 38.4rem;
+  top: 18rem;
+  z-index: 10;
+}
+.p-page-header__title {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: #0b1f51;
+}
+.p-page-header__subtitle {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: #0b1f51;
+}
+.p-page-header__img {
   display: block;
   width: 100%;
 }
@@ -459,4 +526,47 @@ body {
   font-size: 1.4rem;
   line-height: 1.8;
   margin-bottom: 4rem;
+}
+
+.p-message {
+  margin-top: 16.5rem;
+}
+.p-message__inner {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.p-message__image {
+  width: 51.2rem;
+  height: 41.2rem;
+  flex-shrink: 0;
+}
+.p-message__img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-message__body {
+  flex: 1;
+}
+.p-message__title {
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 2.2rem;
+}
+.p-message__text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.p-features {
+  padding: 6rem 0;
+}
+.p-features__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 5.6rem;
 }/*# sourceMappingURL=style.css.map */

@@ -19,15 +19,19 @@
 @use "object/component/news-list";
 @use "object/component/service-card";
 @use "object/component/location-card";
+@use "object/component/feature";
 
 // ==========================================================================
 // Object - Project
 // ==========================================================================
 @use "object/project/mv";
+@use "object/project/page-header";
 @use "object/project/about";
 @use "object/project/service";
 @use "object/project/contact";
 @use "object/project/cta";
+@use "object/project/message";
+@use "object/project/features";
 
 
 // ==========================================================================

@@ -1,0 +1,11 @@
+@use "../../foundation/base" as b;
+
+.p-features {
+    padding: 6rem 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 5.6rem;
+    }
+}

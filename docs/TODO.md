@@ -2,7 +2,7 @@
 
 ## 次回すぐやる
 
-- [ ] aboutus ページの SCSS 実装着手（どのセクションから手を付けるか決定 → 実装）
+- [ ] `p-message` の中身実装（ファイル雛形は作成済み、`@use` のみの状態）
 
 ## SCSS 実装予定
 
@@ -10,13 +10,9 @@
 
 ### Component
 
-- [ ] `c-feature`（01/02 番号カード：`__num` / `__title` / `__text`）
-
 ### Project
 
-- [ ] `p-mv`：aboutus 用バリエーション対応（既存の `p-mv` を流用するか派生を作るか判断）
-- [ ] `p-message`：リード文ブロック（画像 + キャッチ + 本文）
-- [ ] `p-features`：01/02 カード並びレイアウト
+- [ ] `p-message`：リード文ブロック（画像 + キャッチ + 本文）※ファイル作成済・中身未実装
 - [ ] `p-philosophy`：英語見出し + 日本語サブ + キャッチ
 - [ ] `p-company`：dl/dt/dd の2カラム表組み（業務内容だけ dd 複数）
 - [ ] `p-offices`：店舗リスト（名前 / 住所+Mapボタン / iframe の3カラム）
@@ -42,3 +38,5 @@
 - 住所テキストは全箇所 1.4rem で統一
 - aboutus は `pages/` 配下に配置。CSS / ロゴ等のパスは `../` で1段上参照
 - `<dl>` 直下の `<div>` は HTML5 で許可、行ごとのレイアウト制御に使用
+- `p-page-header` は下層ページ共通の見出し帯として運用（aboutus 以外でも使い回す前提）
+- 文章の行数制限は `-webkit-line-clamp` + `display: -webkit-box` + `-webkit-box-orient: vertical` + `overflow: hidden` の4点セット

@@ -1,0 +1,40 @@
+@use "../../foundation/base" as b;
+
+.p-message{
+    margin-top: 16.5rem;
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    &__image{
+        width: 51.2rem;
+        height: 41.2rem;
+        flex-shrink: 0;
+    }
+
+    &__img{
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    &__body{
+        flex: 1;
+    }
+
+    &__title{
+        font-size: 2rem;
+        line-height: 1.6;
+        font-weight: 400;
+        margin-bottom: 2.2rem;
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+}
