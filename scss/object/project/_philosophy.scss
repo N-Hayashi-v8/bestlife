@@ -1,6 +1,6 @@
 @use "../../foundation/base" as b;
 
-.p-cta{
+.p-philosophy{
     margin-top: 8rem;
     padding: 8rem 0;
     background-color: b.$color-bg-dark;
@@ -10,14 +10,21 @@
         text-align: center;
     }
 
-    .c-section-title{
-        text-align: left;
+    &__lead{
+        font-size: 3rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
+    &__heading{
+        font-size: 1.4rem;
+        font-weight: 400;
         margin-bottom: 4rem;
     }
 
-    &__text{
-        font-size: 1.4rem;
-        line-height: 1.8;
-        margin-bottom: 4rem;
+    &__catch{
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1.4;
     }
 }

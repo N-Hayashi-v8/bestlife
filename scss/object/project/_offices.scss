@@ -1,0 +1,60 @@
+@use "../../foundation/base" as b;
+
+.p-offices{
+    margin-top: 8rem;
+
+    .c-section-title{
+        padding-left: 8rem;
+        margin-bottom: 4rem;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+        padding: 4rem 0;
+        border-bottom: 1px solid b.$color-gray;
+    }
+
+    &__name{
+        width: 48rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    &__contact{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__address{
+        font-style: normal;
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    &__map-link{
+        display: inline-block;
+        padding: 0.6rem 2rem;
+        border: 1px solid b.$color-primary;
+        border-radius: 2rem;
+        font-size: 1.4rem;
+        color: b.$color-primary;
+    }
+
+    &__map{
+        width: 24rem;
+        height: 16rem;
+        border-radius: 1rem;
+        flex-shrink: 0;
+    }
+}

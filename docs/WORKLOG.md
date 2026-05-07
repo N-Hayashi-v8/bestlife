@@ -1,5 +1,28 @@
 # 作業ログ
 
+## 2026-05-07
+
+- `pages/aboutus.html`：`p-philosophy` 見出し構造を逆転（英字=装飾、日本語=本見出し）
+  - `<h2>Philosophy</h2>` + `<p>企業理念</p>` → `<p>Philosophy</p>` + `<h2>企業理念</h2>`
+  - クラス名リネーム：`__heading`(英) → `__lead`(英)、`__subheading`(日) → `__heading`(日)
+- `$color-footer-bg` → `$color-bg-dark` にリネーム（footer / cta / philosophy で共有のため汎用化）
+  - `_base.scss` / `_footer.scss` / `_cta.scss` の参照すべて追従
+  - `$color-bg-light` と対称な命名で見通し改善
+- `scss/object/project/_philosophy.scss` 新規作成
+  - 全幅 `$color-bg-dark` 背景・padding 8rem 0・margin-top 8rem
+  - `__inner { text-align: center }` で3要素まとめて中央寄せ
+  - `__lead`(Philosophy) 3rem / `__heading`(企業理念) 1.4rem / `__catch` 4rem（手修正で font-weight 400）
+- `scss/object/project/_company.scss` 新規作成
+  - 外側カード：`$color-bg-light`・`border-radius: 8rem`・padding 6rem 4rem
+  - 各 `__row`：白背景・grid 2列（14rem / 1fr）・`gap: 0.5rem` で行間に薄くベース色
+  - 「業務内容」の `dd` 複数を CSS Grid の auto-placement で縦積み（`__term` を col1、`__desc` を col2 固定）
+- `scss/object/project/_offices.scss` 新規作成
+  - `__item`：flex 3カラム（name / contact / map）・`align-items: flex-start`・border-bottom 区切り
+  - `__name` 48rem（手調整）・`__contact` flex 1・`__map` 24×16rem・`border-radius: 1rem`
+  - `__map-link`：独立スタイル（`c-btn` 派生せず）。padding 0.6rem 2rem、border-radius 2rem でピル型
+- `pages/aboutus.html`：3店舗の iframe `src` 設定（皇居 / 東京タワー / 東京スカイツリー）
+- `scss/style.scss`：philosophy / company / offices の `@use` 追記
+
 ## 2026-05-01
 
 - aboutus の `p-mv` を `p-page-header` として独立（下層ページ共通の見出し帯として再利用前提）

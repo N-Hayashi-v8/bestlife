@@ -1,0 +1,40 @@
+@use "../../foundation/base" as b;
+
+.p-company{
+    margin-top: 8rem;
+
+    &__inner{
+        background-color: b.$color-bg-light;
+        border-radius: 8rem;
+        padding: 6rem 4rem;
+    }
+
+    .c-section-title{
+        padding-left: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: 14rem 1fr;
+        column-gap: 4rem;
+        background-color: b.$color-white;
+        padding: 1.6rem 4rem;
+    }
+
+    &__term{
+        grid-column: 1;
+        font-weight: 400;
+    }
+
+    &__desc{
+        grid-column: 2;
+        line-height: 1.8;
+    }
+}
