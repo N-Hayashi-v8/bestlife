@@ -2,7 +2,7 @@
 
 ## 次回すぐやる
 
-- [ ] `pages/service.html` 子ページ新規作成（aboutus と同じ `pages/` 配下に配置）
+- [ ] `scss/object/project/_service-section.scss` 新規作成、`p-service-section` 共通スタイル＋8 Modifier のレイアウト実装
 
 ## SCSS 実装予定
 
@@ -12,15 +12,26 @@
 
 ### Project
 
-- [ ] サービスページ用 Project 群（カンプ確認後に項目決定）
+- [ ] `p-service-section`（共通base：intro / list / item / illust）
+- [ ] `--sports`：flex 交互（item 内 body+illust の左右切替）
+- [ ] `--business`：1カラム
+- [ ] `--promotion`：grid 3×2
+- [ ] `--media`：grid 2×2
+- [ ] `--region`：grid 3列＋最終行 item+illust（chihou.png）
+- [ ] `--temp`：grid 2×2
+- [ ] `--placement`：flex 1×2
+- [ ] `--care`：grid 2×3
 
 ## 保留・仮置き
 
-- [ ] p-cta タイトル文言の見直し（現状「事業内容」のまま、aboutus でも同じ）
+- [ ] `img/Frame 88.png` のリネーム（スペース入りファイル名、説明図プレースホルダ用途）
+- [ ] サービス詳細部の「※事業の詳細が決まり次第画像差替」注記をHTMLに反映するか検討
+- [ ] p-cta タイトル文言の見直し（現状「事業内容」のまま、aboutus / service でも同じ）
 - [ ] `c-news-list__date` の `<time datetime="...">` 属性付与（ダミーデータ確定後）
 - [ ] `c-location-card__address` 1.4rem で窮屈に見えないか実機確認（NG なら 1.3rem に戻す）
 - [ ] aboutus 事業所一覧の住所データ確定（現状3店舗とも仮で1号店住所）
 - [ ] レスポンシブ対応の方針決め（PC固定実装からブレークポイント設計へ）
+- [ ] `pages/service.html` 一部インデント崩れの整形（class 適用時の編集差分による軽微なズレ。HTML構造は整合）
 
 ## メモ
 

@@ -1,5 +1,19 @@
 # 作業ログ
 
+## 2026-05-08
+
+- サービスリンク href 修正（`index.html` / `pages/aboutus.html` / `pages/service.html` のヘッダー・フッターnav 計6箇所 `href="#"` → `service.html` または `pages/service.html`）
+- `pages/service.html` テキスト修正
+  - 05 地方創生 intro：`Media` / `メディア事業` → `Regional Development` / `地方創生事業`
+  - 08 高齢者 intro：`Aisabled` → `Disabled`
+- `pages/service.html` 全8セクションに BEM クラス命名適用（FLOCSS Project 単一クラス＋Modifier 方針）
+  - Project：`p-service-section`（サービスページ専用、c- 化なし）
+  - Modifier：`--sports` / `--business` / `--promotion` / `--media` / `--region` / `--temp` / `--placement` / `--care`
+  - 共通内部構造：`__intro` / `__intro-img` / `__intro-body` / `__intro-en` / `__intro-title` / `__intro-text` / `__list` / `__item` / `__item-title` / `__item-text` / `__item-figure`
+  - 01 sports 専用：`__item-body`（h3+本文+図のラッパ）、`__illust`（sports1〜3.png）
+  - 05 region 専用：`__illust`（chihou.png、`__list` 内最後尾）
+  - intro 部の img ラッパー div を削除し img に直接クラス付与（構造をフラット化）
+
 ## 2026-05-07
 
 - `pages/aboutus.html`：`p-philosophy` 見出し構造を逆転（英字=装飾、日本語=本見出し）
