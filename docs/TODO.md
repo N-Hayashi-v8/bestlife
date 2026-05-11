@@ -2,7 +2,11 @@
 
 ## 次回すぐやる
 
-- [ ] `scss/object/project/_service-section.scss` 新規作成、`p-service-section` 共通スタイル＋8 Modifier のレイアウト実装
+- [ ] 実機での全体見た目確認・微調整
+  - `--sports` の illust 縦位置（現状 `align-items: center`、mock との差分要確認）
+  - 各セクション間の `gap`・余白バランス
+  - text の `height` で 4 行目の頭が見えていないか確認
+- [ ] media / temp / placement / care の 4 Modifier 集約検討（同値なので DRY 化可能、ただし将来の分岐余地とのトレードオフ）
 
 ## SCSS 実装予定
 
@@ -11,16 +15,6 @@
 ### Component
 
 ### Project
-
-- [ ] `p-service-section`（共通base：intro / list / item / illust）
-- [ ] `--sports`：flex 交互（item 内 body+illust の左右切替）
-- [ ] `--business`：1カラム
-- [ ] `--promotion`：grid 3×2
-- [ ] `--media`：grid 2×2
-- [ ] `--region`：grid 3列＋最終行 item+illust（chihou.png）
-- [ ] `--temp`：grid 2×2
-- [ ] `--placement`：flex 1×2
-- [ ] `--care`：grid 2×3
 
 ## 保留・仮置き
 
@@ -32,6 +26,8 @@
 - [ ] aboutus 事業所一覧の住所データ確定（現状3店舗とも仮で1号店住所）
 - [ ] レスポンシブ対応の方針決め（PC固定実装からブレークポイント設計へ）
 - [ ] `pages/service.html` 一部インデント崩れの整形（class 適用時の編集差分による軽微なズレ。HTML構造は整合）
+- [ ] `p-service--page` Modifier 名のリネーム検討（`--page` は意味性が弱い → `--lower` / `--sub` 等）
+- [ ] `$color-catch` を border にも流用中。将来分岐したら `$color-border` 新設検討
 
 ## メモ
 
@@ -47,3 +43,7 @@
 - 文章の行数制限は `-webkit-line-clamp` + `display: -webkit-box` + `-webkit-box-orient: vertical` + `overflow: hidden` の4点セット
 - 複数 dd を縦積みする場合は CSS Grid の auto-placement（dt: col1 / dd: col2 固定）が簡潔
 - ダーク背景は `$color-bg-dark`、ライト背景は `$color-bg-light`（対称命名）
+- 線を l-inner 幅に収める：`::after` を `position: absolute` + `max-width: 116.4rem` + `margin-inline: auto` で擬似ボーダー化
+- 「最後の同クラス要素」を選ぶ：`:not(:has(+ .同クラス))` パターン（`:last-child` は親の最終子限定で意図と合わないケースあり）
+- カード内の絶対配置：`__item` に `position: relative` + 子要素に `position: absolute` で Figma 座標を直訳。カードサイズ固定時に有効
+- text の `height` を `overflow: hidden` で切る時は、line-height × 行数 と合わせて「行の途中で切れない」値にする方針

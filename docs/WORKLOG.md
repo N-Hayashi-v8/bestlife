@@ -1,5 +1,27 @@
 # 作業ログ
 
+## 2026-05-11
+
+- `scss/object/project/_service-section.scss` 新規作成（service ページ各事業セクション共通スタイル＋8 Modifier）
+  - 共通 base
+    - `padding-block: 12rem`、`::after` 擬似要素で区切り線（max-width 116.4rem + margin-inline auto で l-inner 幅に収める、色 `$color-catch`）
+    - 最終 service-section の線消しは `:not(:has(+ .p-service-section))::after { content: none }`（`:last-child` は後続の p-cta があるため不発）
+    - `__intro`：flex center、padding 0 7rem、margin-bottom 8.6rem
+    - `__intro-img` 38.7×29.2rem `object-fit: cover` / `__intro-body` flex 1 / `__intro-en` 1.6rem / `__intro-title` 2rem bold / `__intro-text` 52.5×15.9rem `overflow: hidden`
+    - `__item`：背景 `$color-bg-light`・border-radius 3rem・padding 2.5rem・flex column gap 1.5rem
+    - `__item-title`：padding-bottom 1rem + border-bottom 1px `$color-catch`、2rem
+    - `__item-figure`：display block、width 100%
+  - Modifier 実装方針：カード内の text / figure は `position: absolute` で Figma 絶対座標を直訳
+    - `--sports`：flex 交互（DOM 順で自然に左右切替）。`__item-body` をカード化（74.9×50.5rem）、illust 3 枚を `:nth-child` で個別サイズ指定
+    - `--business`：1 カラム中央寄せ、カード 110×79.2rem
+    - `--promotion`：grid 3 列（35.6×44.2rem）、gap 3.2rem
+    - `--media`：grid 2 列（54.2×53.6rem）、gap 4rem
+    - `--region`：grid 3 列＋illust を最終行 col2-3 に配置（`grid-column: 2 / 4` + center/center）
+    - `--temp` / `--placement` / `--care`：media と同値（2 列 grid、カード数だけ違う）
+- `scss/style.scss`：`@use "object/project/service-section"` 追記
+- `pages/service.html`：`p-service` に `--page` Modifier 追加（下層ページ用、margin-top 上書き）
+- `scss/object/project/_service.scss`：`&--page { margin-top: 0 }` 追加
+
 ## 2026-05-08
 
 - サービスリンク href 修正（`index.html` / `pages/aboutus.html` / `pages/service.html` のヘッダー・フッターnav 計6箇所 `href="#"` → `service.html` または `pages/service.html`）

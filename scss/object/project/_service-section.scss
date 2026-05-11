@@ -1,0 +1,406 @@
+@use "../../foundation/base" as *;
+
+// ==========================================================================
+// p-service-section
+// service ページの各事業セクション共通スタイル
+// レイアウト差異は Modifier 側で上書きする
+// ==========================================================================
+
+.p-service-section {
+    position: relative;
+    padding-block: 12rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 116.4rem;
+        height: 1px;
+        margin-inline: auto;
+        background-color: $color-catch;
+    }
+
+    &:not(:has(+ .p-service-section))::after {
+        content: none;
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 0 7rem;
+        margin-bottom: 8.6rem;
+    }
+
+    &__intro-img {
+        display: block;
+        width: 38.7rem;
+        height: 29.2rem;
+        object-fit: cover;
+    }
+
+    &__intro-body {
+        flex: 1;
+    }
+
+    &__intro-en {
+        margin-bottom: 0.4rem;
+        font-size: 1.6rem;
+    }
+
+    &__intro-title {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__intro-text {
+        // 本文：font-size 1.6rem / line-height 1.625 は body から継承
+        width: 52.5rem;
+        height: 15.9rem;
+        overflow: hidden;
+    }
+
+    &__list {
+        // item の並べ方は Modifier 側で指定
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2.5rem;
+        background-color: $color-bg-light;
+        border-radius: 3rem;
+    }
+
+    &__item-body {
+        // 主に --sports で使用（item 内の title + text + figure をラップ）
+    }
+
+    &__item-title {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-catch;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &__item-text {
+        // 本文：body から font-size 1.6rem / line-height 1.625 を継承
+    }
+
+    &__item-figure {
+        display: block;
+        width: 100%;
+    }
+
+    &__illust {
+        // --sports / --region で使用
+    }
+
+    // ----------------------------------------------------------------------
+    // Modifier
+    // ----------------------------------------------------------------------
+
+    // 01 スポーツエージェント：flex 交互（body+illust の左右切替）
+    &--sports {
+        .p-service-section__list {
+            display: flex;
+            flex-direction: column;
+            gap: 7rem;
+        }
+
+        .p-service-section__item {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+        .p-service-section__item-body {
+            position: relative;
+            flex-shrink: 0;
+            width: 74.9rem;
+            height: 50.5rem;
+            padding: 3rem 3rem 0;
+            background-color: $color-bg-light;
+            border-radius: 3rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 68.9rem;
+            height: 5.8rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 16.2rem;
+            left: 14.6rem;
+            width: 45.8rem;
+            height: 30.3rem;
+        }
+
+        .p-service-section__item:nth-child(1) .p-service-section__illust {
+            width: 20.4rem;
+            height: 54.6rem;
+        }
+
+        .p-service-section__item:nth-child(2) .p-service-section__illust {
+            width: 34.3rem;
+            height: 48.2rem;
+        }
+
+        .p-service-section__item:nth-child(3) .p-service-section__illust {
+            width: 24rem;
+            height: 49.7rem;
+        }
+    }
+
+    // 02 ビジネスコンサル：1カラム
+    &--business {
+        .p-service-section__list {
+            display: flex;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            width: 110rem;
+            height: 79.2rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 104rem;
+            height: 5.8rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 16.2rem;
+            left: 12rem;
+            width: 85.9rem;
+            height: 56.8rem;
+        }
+    }
+
+    // 03 セールスプロモーション：grid 3×2
+    &--promotion {
+        .p-service-section__list {
+            display: grid;
+            grid-template-columns: repeat(3, 35.6rem);
+            gap: 3.2rem;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            height: 44.2rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 29.6rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 19.5rem;
+            left: 3rem;
+            width: 29.6rem;
+            height: 20.3rem;
+        }
+    }
+
+    // 04 メディア：grid 2×2
+    &--media {
+        .p-service-section__list {
+            display: grid;
+            grid-template-columns: repeat(2, 54.2rem);
+            gap: 4rem;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            height: 53.6rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 48.2rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 19.6rem;
+            left: 3.1rem;
+            width: 47.9rem;
+            height: 29.8rem;
+        }
+    }
+
+    // 05 地方創生：grid 3列＋最終行 item+illust
+    &--region {
+        .p-service-section__list {
+            display: grid;
+            grid-template-columns: repeat(3, 35.6rem);
+            gap: 3.2rem;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            height: 44.2rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 29.6rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 19.5rem;
+            left: 3rem;
+            width: 29.6rem;
+            height: 20.3rem;
+        }
+
+        .p-service-section__illust {
+            grid-column: 2 / 4;
+            justify-self: center;
+            align-self: center;
+            width: 67.2rem;
+            height: 23.8rem;
+        }
+    }
+
+    // 06 人材派遣：grid 2×2
+    &--temp {
+        .p-service-section__list {
+            display: grid;
+            grid-template-columns: repeat(2, 54.2rem);
+            gap: 4rem;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            height: 53.6rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 48.2rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 19.6rem;
+            left: 3.1rem;
+            width: 47.9rem;
+            height: 29.8rem;
+        }
+    }
+
+    // 07 有料職業紹介：grid 1×2
+    &--placement {
+        .p-service-section__list {
+            display: grid;
+            grid-template-columns: repeat(2, 54.2rem);
+            gap: 4rem;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            height: 53.6rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 48.2rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 19.6rem;
+            left: 3.1rem;
+            width: 47.9rem;
+            height: 29.8rem;
+        }
+    }
+
+    // 08 高齢者・障がい者介護：grid 2×3
+    &--care {
+        .p-service-section__list {
+            display: grid;
+            grid-template-columns: repeat(2, 54.2rem);
+            gap: 4rem;
+            justify-content: center;
+        }
+
+        .p-service-section__item {
+            position: relative;
+            display: block;
+            height: 53.6rem;
+        }
+
+        .p-service-section__item-text {
+            position: absolute;
+            top: 8.2rem;
+            left: 3rem;
+            width: 48.2rem;
+            height: 10rem;
+            overflow: hidden;
+        }
+
+        .p-service-section__item-figure {
+            position: absolute;
+            top: 19.6rem;
+            left: 3.1rem;
+            width: 47.9rem;
+            height: 29.8rem;
+        }
+    }
+}
