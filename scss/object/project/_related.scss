@@ -1,0 +1,22 @@
+@use "../../foundation/base" as b;
+
+.p-related{
+    margin-top: 6rem;
+    margin-bottom: 23rem;
+
+    &__title{
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+        color: #333333;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        row-gap: 5rem;
+        margin-top: 2rem;
+        list-style: none;
+    }
+}

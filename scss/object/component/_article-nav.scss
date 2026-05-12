@@ -1,0 +1,64 @@
+@use "../../foundation/base" as b;
+
+.c-article-nav{
+    display: flex;
+    margin-top: 10rem;
+
+    &__link{
+        position: relative;
+        flex: 0 0 50%;
+        border-top: 1px solid b.$color-gray-light;
+        border-bottom: 1px solid b.$color-gray-light;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__link--prev{
+        padding: 4rem 0 4rem 12.8rem;
+        border-right: 1px solid b.$color-gray-light;
+    }
+
+    &__link--next{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__label{
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    &__link--prev &__label{
+        left: 0;
+    }
+
+    &__link--next &__label{
+        right: 0;
+    }
+
+    &__link--prev &__img{
+        width: 6.6rem;
+        height: 7.9rem;
+    }
+
+    &__link--next &__img{
+        width: 12.5rem;
+        height: 10.6rem;
+        margin: 2.6rem 0;
+        border-radius: 2rem;
+        object-fit: cover;
+    }
+
+    &__title{
+        margin-left: 4rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+    }
+
+}

@@ -21,6 +21,7 @@
 @use "object/component/location-card";
 @use "object/component/feature";
 @use "object/component/news-card";
+@use "object/component/article-nav";
 
 // ==========================================================================
 // Object - Project
@@ -38,6 +39,8 @@
 @use "object/project/offices";
 @use "object/project/service-section";
 @use "object/project/news";
+@use "object/project/article";
+@use "object/project/related";
 
 
 // ==========================================================================

@@ -19,6 +19,29 @@
   - `index.html` の `p-mv__news-more`（続きを見る）1箇所
 - `scss/object/component/_nav.scss`：`c-nav__link--cta` の padding を `2.4rem 3rem` に調整（header 高さに合わせ確定）
 - `scss/style.scss`：`news-card`（Component）/ `news`（Project）の `@use` 追記
+- `pages/news-detail.html` 新規作成（記事詳細ページ）
+  - 構造：`<article class="p-article">` 本体（header + 画像 + 本文 + prev/next ナビ）→ `<section class="p-related">`（関連記事 3 列）→ p-cta
+  - セマンティクス：日付に `<time datetime>`、記事ヘッダを `<header>`、関連記事を `<section>`
+  - prev/next ナビ：左カードは「前の記事なし → HOME へ」のフォールバック（`home_house.png`）、右カードは label + title + thumb
+- `scss/object/project/_article.scss` 新規作成
+  - `__inner`：l-inner の max-width を 110rem に上書き
+  - `__header`：border-bottom 1px `$color-gray-light`
+  - `__category` / `__date`：font 1.4rem / line-height 8.7rem（Figma の余白指定をそのまま適用）
+  - `__title`：font 3rem / weight 700 / line-height 4.8rem
+  - `__img`：110×72.3rem / border-radius 3rem / margin-top 4.2rem
+  - `__text`：font 1.6rem / line-height 2.6rem / margin-top 4rem
+- `scss/object/component/_article-nav.scss` 新規作成（prev/next ナビ、再利用想定で c- 化）
+  - `display: flex`、各 `__link` に `flex: 0 0 50%`（コンテンツ幅に依存させず 50% 固定）
+  - border-top / border-bottom 1px `$color-gray-light`、prev のみ border-right で中央仕切り
+  - `--prev`：padding 6rem 0 6rem 12.8rem（HOME 画像は flow 配置）
+  - `--next`：display flex + space-between + align-items center、title `margin-left: 4rem`、img `margin: 2.6rem 0`
+  - ラベル：`position: absolute` + `bottom: 100%` + `margin-bottom` で border の少し上に浮かす（被り回避）
+- `scss/object/project/_related.scss` 新規作成
+  - `__title`：font 2rem / weight 700 / color #333333（インライン色）
+  - `__list`：grid 3列固定幅 `repeat(3, 35rem)`・`justify-content: space-between`（p-news__list と同じ構造）
+- `scss/foundation/_base.scss`：`$color-gray-light: #BBBBBB` 追加（記事ヘッダ・nav の border 用、`$color-gray` の薄バリアント）
+- `scss/style.scss`：`article-nav`（Component）/ `article` / `related`（Project）の `@use` 追記
+- `img/home_house.png` 追加（前の記事なし時のフォールバック画像）
 
 ## 2026-05-11
 
