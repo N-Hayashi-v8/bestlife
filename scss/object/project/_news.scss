@@ -1,0 +1,15 @@
+@use "../../foundation/base" as b;
+
+.p-news{
+    margin-top: 20rem;
+    margin-bottom: 12rem;
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 35rem);
+        justify-content: space-between;
+        row-gap: 5rem;
+        margin-top: 6rem;
+        list-style: none;
+    }
+}

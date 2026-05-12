@@ -1,5 +1,25 @@
 # 作業ログ
 
+## 2026-05-12
+
+- `pages/news.html` 新規作成（新着情報ページ、カード型ニュース一覧 ×12）
+  - 構造：`<section>` 直下に `l-inner` ラッパー、grid コンテナ `<ul>`、各カード `<li>` を `<a>` でラップ
+  - 見出し階層：`<h1 class="c-section-title">` 直下のカード見出しは `<h3>`（リストアイテム内タイトル）
+  - クラス命名（FLOCSS / BEM）：Project `p-news`、Component `c-news-card`（再利用想定で c- 化）
+- `scss/object/project/_news.scss` 新規作成
+  - `p-news`：`margin-top: 20rem` / `margin-bottom: 12rem`
+  - `__list`：grid 3列固定幅 `repeat(3, 35rem)`・`justify-content: space-between` で l-inner 両端揃え・row-gap 5rem
+- `scss/object/component/_news-card.scss` 新規作成
+  - `__link`：`display: block`、`color: inherit` / `text-decoration: none`
+  - `__img`：35×23rem・border-radius 3rem・`object-fit: cover`
+  - `__date`：1.4rem / line-height 3.7rem（画像とタイトル間の余白を line-height で担う）
+  - `__title`：1.6rem / line-height 2.6rem / `width: 35rem` / `height: 5.7rem` / `overflow: hidden`（2行強でクリップ）
+- 既存ページの「ニュース」リンク href 更新（計9箇所）
+  - `index.html` / `pages/aboutus.html` / `pages/service.html` / `pages/news.html` の header・footer 計8箇所
+  - `index.html` の `p-mv__news-more`（続きを見る）1箇所
+- `scss/object/component/_nav.scss`：`c-nav__link--cta` の padding を `2.4rem 3rem` に調整（header 高さに合わせ確定）
+- `scss/style.scss`：`news-card`（Component）/ `news`（Project）の `@use` 追記
+
 ## 2026-05-11
 
 - `scss/object/project/_service-section.scss` 新規作成（service ページ各事業セクション共通スタイル＋8 Modifier）

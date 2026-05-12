@@ -20,6 +20,7 @@
 @use "object/component/service-card";
 @use "object/component/location-card";
 @use "object/component/feature";
+@use "object/component/news-card";
 
 // ==========================================================================
 // Object - Project
@@ -36,6 +37,7 @@
 @use "object/project/company";
 @use "object/project/offices";
 @use "object/project/service-section";
+@use "object/project/news";
 
 
 // ==========================================================================
