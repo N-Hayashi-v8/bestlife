@@ -1,0 +1,117 @@
+@use "../../foundation/base" as b;
+
+.p-form{
+
+    margin-bottom: 10rem;
+
+    &__inner{
+        max-width: 102.2rem;
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: 30.2rem 1fr;
+        align-items: center;
+    }
+
+    &__row:has(&__textarea){
+        align-items: start;
+    }
+
+    &__label{
+        height: 6.8rem;
+        padding-block: 1.6rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 3.6rem;
+    }
+
+    &__required{
+        display: inline-block;
+        width: 5.4rem;
+        height: 2rem;
+        margin-left: 1rem;
+        background-color: #e80101;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 2rem;
+        text-align: center;
+        border-radius: 1rem;
+        vertical-align: middle;
+    }
+
+    &__input,
+    &__select{
+        width: 72rem;
+        height: 3rem;
+        padding: 0 1rem;
+        margin: 2rem 0;
+        border: 1px solid b.$color-gray-light;
+        font-size: 1.6rem;
+    }
+
+    &__textarea{
+        width: 72rem;
+        height: 16rem;
+        padding: 0 1rem;
+        margin: 2rem 0;
+        border: 1px solid b.$color-gray-light;
+        font-size: 1.6rem;
+    }
+
+    &__group{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__group &__input{
+        width: 20rem;
+    }
+
+    &__sub-label{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.6rem;
+    }
+
+    &__agree{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__agree-text{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3.6rem;
+    }
+
+    &__checkbox{
+        -webkit-appearance: auto;
+        appearance: auto;
+        width: 2rem;
+        height: 2rem;
+    }
+
+
+    &__privacy-link{
+        color: #005ec9;
+    }
+
+    &__submit{
+        display: block;
+        width: 44.6rem;
+        height: 6.2rem;
+        margin: 2rem auto 0;
+        background-color: b.$color-primary;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 700;
+        border-radius: 3rem;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+}

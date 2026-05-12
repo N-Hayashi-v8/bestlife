@@ -1323,4 +1323,156 @@ body {
   row-gap: 5rem;
   margin-top: 2rem;
   list-style: none;
+}
+
+.p-tel {
+  margin-top: 4.8rem;
+}
+.p-tel__box {
+  margin-top: 4.7rem;
+  height: 30.6rem;
+  background-color: #f6f6f2;
+  border-radius: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-tel__title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 5rem;
+  color: #0b1f51;
+  text-align: center;
+}
+.p-tel__number {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 6.8rem;
+  color: #333333;
+  text-align: center;
+}
+.p-tel__hours {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+  color: #333333;
+  text-align: center;
+}
+
+.p-form {
+  margin-bottom: 10rem;
+}
+.p-form__inner {
+  max-width: 102.2rem;
+}
+.p-form__row {
+  display: grid;
+  grid-template-columns: 30.2rem 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.p-form__row:has(.p-form__textarea) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.p-form__label {
+  height: 6.8rem;
+  padding-block: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+.p-form__required {
+  display: inline-block;
+  width: 5.4rem;
+  height: 2rem;
+  margin-left: 1rem;
+  background-color: #e80101;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  vertical-align: middle;
+}
+.p-form__input, .p-form__select {
+  width: 72rem;
+  height: 3rem;
+  padding: 0 1rem;
+  margin: 2rem 0;
+  border: 1px solid #BBBBBB;
+  font-size: 1.6rem;
+}
+.p-form__textarea {
+  width: 72rem;
+  height: 16rem;
+  padding: 0 1rem;
+  margin: 2rem 0;
+  border: 1px solid #BBBBBB;
+  font-size: 1.6rem;
+}
+.p-form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.p-form__group .p-form__input {
+  width: 20rem;
+}
+.p-form__sub-label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3.6rem;
+}
+.p-form__agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.p-form__agree-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3.6rem;
+}
+.p-form__checkbox {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+       appearance: auto;
+  width: 2rem;
+  height: 2rem;
+}
+.p-form__privacy-link {
+  color: #005ec9;
+}
+.p-form__submit {
+  display: block;
+  width: 44.6rem;
+  height: 6.2rem;
+  margin: 2rem auto 0;
+  background-color: #0b1f51;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

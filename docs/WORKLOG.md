@@ -42,6 +42,34 @@
 - `scss/foundation/_base.scss`：`$color-gray-light: #BBBBBB` 追加（記事ヘッダ・nav の border 用、`$color-gray` の薄バリアント）
 - `scss/style.scss`：`article-nav`（Component）/ `article` / `related`（Project）の `@use` 追記
 - `img/home_house.png` 追加（前の記事なし時のフォールバック画像）
+- `pages/contact.html` 新規作成（お問い合わせページ）
+  - 構造：page-header → 電話セクション（角丸グレーボックス）→ メールフォーム（8 フィールド + プライバシー同意 + submit）
+  - フォーム：各行を `<div class="p-form__row">` でラップ、`<label for>` で input と関連付け、姓/名・セイ/メイは `<div class="p-form__group">` 入れ子で構造化
+  - 必須バッジ：label 内に `<span class="p-form__required">必須</span>` で内包（インライン flow）
+  - プライバシー同意：checkbox + 同意 label + プライバシーポリシーリンクを `__agree` 内で flex 並び
+  - HTML5 標準：`required` 属性 / `placeholder` / `<time datetime>` で記事日付セマンティクス維持
+- `scss/object/project/_tel.scss` 新規作成
+  - `__box`：max-width 116.4rem（l-inner）、height 30.6rem、border-radius 8rem、`$color-bg-light` 背景
+  - flex column + `justify-content: center` で 3 要素（title / number / hours）を縦中央寄せ
+  - title は `$color-primary`、number / hours は #333333 インライン
+- `scss/object/project/_form.scss` 新規作成
+  - `__inner`：max-width 102.2rem（l-inner より狭い、Figma の form 全体幅に合わせる）
+  - `__row`：grid 2列（30.2rem / 1fr）、`align-items: center`
+  - textarea 行のみ `:has(&__textarea)` セレクタで `align-items: start` に切替（ラベル上寄せ）
+  - `__label`：height 6.8rem / padding-block 1.6rem / line-height 3.6rem（box 内縦中央）
+  - `__required`：5.4×2rem の赤い pill バッジ（#E80101 / white / radius 1rem、`.9` 切り上げ適用）
+  - `__input` / `__select`：width 72rem / height 3rem / margin-block 2rem（行内に縦余白確保）
+  - `__textarea`：width 72rem / height 16rem（`.9` 切り上げ）
+  - `__group`：姓/名・セイ/メイの flex ラッパ、内側 input は width 20rem に上書き
+  - `__checkbox`：destyle.css の `appearance: none` を `appearance: auto` で解除しブラウザデフォルト UI 復活
+  - `__submit`：44.6×6.2rem / `$color-primary` 背景 / radius 3rem / 中央寄せ
+- 各ページの「お問い合わせ」リンク href 更新（計16箇所）
+  - `index.html`（header + cta + footer 3箇所）→ `pages/contact.html`
+  - `pages/aboutus.html` / `pages/service.html` / `pages/news-detail.html`（各 header + cta + footer 3箇所）→ `contact.html`
+  - `pages/news.html`（header + footer 2箇所）→ `contact.html`
+  - `pages/contact.html`（header + footer 自己リンク 2箇所）→ `contact.html`
+- `scss/style.scss`：`tel` / `form`（Project）の `@use` 追記
+- `img/contact.jpg` 追加（page-header 用画像）
 
 ## 2026-05-11
 

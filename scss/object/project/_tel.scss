@@ -1,0 +1,39 @@
+@use "../../foundation/base" as b;
+
+.p-tel{
+    margin-top: 4.8rem;
+
+    &__box{
+        margin-top: 4.7rem;
+        height: 30.6rem;
+        background-color: b.$color-bg-light;
+        border-radius: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title{
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 5rem;
+        color: b.$color-primary;
+        text-align: center;
+    }
+
+    &__number{
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 6.8rem;
+        color: #333333;
+        text-align: center;
+    }
+
+    &__hours{
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 2.7rem;
+        color: #333333;
+        text-align: center;
+    }
+}

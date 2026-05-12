@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/destyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="l-header">
+
+        <a class="l-header__logo" href="../index.html">
+            <img src="../img/logo.png" alt="ベストライフ">
+        </a>
+
+        <nav class="l-header__nav">
+            <ul class="c-nav">
+                <li class="c-nav__item"><a class="c-nav__link" href="../index.html">HOME</a></li>
+                <li class="c-nav__item"><a class="c-nav__link" href="aboutus.html">会社案内</a></li>
+                <li class="c-nav__item"><a class="c-nav__link" href="service.html">サービス</a></li>
+                <li class="c-nav__item"><a class="c-nav__link" href="news.html">ニュース</a></li>
+                <li class="c-nav__item"><a class="c-nav__link c-nav__link--cta" href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="p-page-header">
+
+            <div class="p-page-header__catch">
+                <p class="p-page-header__title">Contact</p>
+                <p class="p-page-header__subtitle">お問い合わせ</p>
+            </div>
+
+            <img class="p-page-header__img" src="../img/contact.jpg" alt="">
+
+        </section>
+
+        <section class="p-tel">
+            <div class="p-tel__inner l-inner">
+                <div class="p-tel__box">
+                    <h2 class="p-tel__title">お電話でのお問い合わせ</h2>
+                    <p class="p-tel__number">00-0000-0000</p>
+                    <p class="p-tel__hours">電話受付時間 00:00～00:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-form">
+            <div class="p-form__inner l-inner">
+                <form class="p-form__body" action="#" method="post">
+
+                    <div class="p-form__row">
+                        <label class="p-form__label" for="inquiry-type">お問い合わせ項目 <span class="p-form__required">必須</span></label>
+                        <select class="p-form__select" name="inquiry-type" id="inquiry-type" required>
+                            <option value="">選択してください</option>
+                            <option value="service">サービスについて</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="p-form__row">
+                        <label class="p-form__label" for="company">御社名 <span class="p-form__required">必須</span></label>
+                        <input class="p-form__input" type="text" id="company" name="company" placeholder="例：株式会社 バックキャストテクノロジー総合研究所" required>
+                    </div>
+
+                    <div class="p-form__row">
+                        <p class="p-form__label">お名前 <span class="p-form__required">必須</span></p>
+                        <div class="p-form__group">
+                            <label class="p-form__sub-label" for="last-name">姓</label>
+                            <input class="p-form__input" type="text" id="last-name" name="last-name" placeholder="例：田中" required>
+                            <label class="p-form__sub-label" for="first-name">名</label>
+                            <input class="p-form__input" type="text" id="first-name" name="first-name" placeholder="例：太郎" required>
+                        </div>
+                    </div>
+
+                    <div class="p-form__row">
+                        <p class="p-form__label">フリガナ <span class="p-form__required">必須</span></p>
+                        <div class="p-form__group">
+                            <label class="p-form__sub-label" for="last-name-kana">セイ</label>
+                            <input class="p-form__input" type="text" id="last-name-kana" name="last-name-kana" placeholder="例：タナカ" required>
+                            <label class="p-form__sub-label" for="first-name-kana">メイ</label>
+                            <input class="p-form__input" type="text" id="first-name-kana" name="first-name-kana" placeholder="例：タロウ" required>
+                        </div>
+                    </div>
+
+                    <div class="p-form__row">
+                        <label class="p-form__label" for="email">メールアドレス <span class="p-form__required">必須</span></label>
+                        <input class="p-form__input" type="email" id="email" name="email" placeholder="例：info@sample.com" required>
+                    </div>
+
+                    <div class="p-form__row">
+                        <label class="p-form__label" for="email-confirm">メールアドレス（再入力） <span class="p-form__required">必須</span></label>
+                        <input class="p-form__input" type="email" id="email-confirm" name="email-confirm" placeholder="例：info@sample.com" required>
+                    </div>
+
+                    <div class="p-form__row">
+                        <label class="p-form__label" for="message">ご相談内容 <span class="p-form__required">必須</span></label>
+                        <textarea class="p-form__textarea" id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="p-form__row">
+                        <p class="p-form__label">プライバシーポリシー <span class="p-form__required">必須</span></p>
+                        <div class="p-form__agree">
+                            <input class="p-form__checkbox" type="checkbox" id="privacy" name="privacy" required>
+                            <label class="p-form__agree-text" for="privacy">プライバシーポリシーに同意します。</label>
+                            <a class="p-form__privacy-link" href="#">プライバシーポリシー</a>
+                        </div>
+                    </div>
+
+                    <button class="p-form__submit" type="submit">確認画面へ進む</button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="l-footer">
+        <div class="l-footer__inner l-inner">
+            <div class="l-footer__upper">
+                <a href="#" class="l-footer__logo">
+                    <img src="../img/logo.png" alt="">
+                </a>
+                <nav>
+                    <ul class="c-nav c-nav--footer">
+                        <li class="c-nav__item"><a class="c-nav__link" href="#">ホーム</a></li>
+                        <li class="c-nav__item"><a class="c-nav__link" href="#">会社案内</a></li>
+                        <li class="c-nav__item"><a class="c-nav__link" href="service.html">サービス</a></li>
+                        <li class="c-nav__item"><a class="c-nav__link" href="news.html">ニュース</a></li>
+                        <li class="c-nav__item"><a class="c-nav__link" href="contact.html">お問い合わせ</a></li>
+                        <li class="c-nav__item"><a class="c-nav__link" href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <address class="l-footer__address">
+                <p class="l-footer__shop-name">ベストライフなんば1号店</p>
+                <p class="l-footer__address-detail">
+                    〒556-0005<br>
+                    大阪市浪速区日本橋4-5-21 501<br>
+                    TEL:06-0000-0000
+                </p>
+            </address>
+
+            <div class="l-footer__bottom">
+                <small>Copyright &copy; ベストライフなんば All Rights Reserved.</small>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 
 ## 次回すぐやる
 
+- [ ] **p-form のラベルと input の縦位置調整（持ち帰り）**：align-items: center + label padding-block 1.6rem + input margin-block 2rem で対応中、実機で違和感が残るため再検討
 - [ ] 実機での全体見た目確認・微調整
   - `--sports` の illust 縦位置（現状 `align-items: center`、mock との差分要確認）
   - 各セクション間の `gap`・余白バランス
