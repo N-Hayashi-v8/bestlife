@@ -1,5 +1,26 @@
 # 作業ログ
 
+## 2026-05-14
+
+- `pages/privacy-policy.html` 新規作成（プライバシーポリシーページ、最終ページ）
+  - 構造：page-header → `p-policy`（規約本文 7 ブロック）→ p-cta
+  - 7 セクションは 1 つの `<section class="p-policy">` に集約、内部を `<div class="p-policy__block">` ×7 に格下げ（独立ランドマーク化の意味が薄いため）
+  - クラス命名（FLOCSS / BEM）：Project `p-policy` / `__inner` / `__block` / `__heading` / `__text`
+  - 最初のブロックは h3 なし（intro 扱い）、残り 6 ブロックは h3 ありの統一構造
+  - 本文は `<br>` で改行・空行を作る方針（既存パターン踏襲）、`__text` には margin を持たせず line-height のみ
+- `scss/object/project/_policy.scss` 新規作成
+  - `p-policy`：`margin-top: 12rem` / `margin-bottom: 12rem`
+  - `__inner`：`max-width: 110rem`（読み物用、p-article と揃え）
+  - `__block + &__block`：`margin-top: 6rem`（隣接セレクタで先頭ブロックには付与しない）
+  - `__heading`：font 1.8rem / weight 700 / margin-bottom 1.6rem / color #333333
+  - `__text`：font 1.6rem / line-height 2.6rem / color #333333
+- `scss/style.scss`：`policy`（Project）の `@use` 追記
+- 各ページの「プライバシーポリシー」リンク href 更新（計 7 箇所）
+  - `index.html`（footer 1 箇所）→ `pages/privacy-policy.html`
+  - `pages/aboutus.html` / `pages/service.html` / `pages/news.html` / `pages/news-detail.html` / `pages/contact.html`（各 footer 1 箇所）→ `privacy-policy.html`
+  - `pages/contact.html`（フォーム同意欄 `p-form__privacy-link` 1 箇所）→ `privacy-policy.html`
+- 全 7 ページ実装完了（index / aboutus / service / news / news-detail / contact / privacy-policy）
+
 ## 2026-05-12
 
 - `pages/news.html` 新規作成（新着情報ページ、カード型ニュース一覧 ×12）
