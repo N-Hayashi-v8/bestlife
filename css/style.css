@@ -227,7 +227,7 @@ body {
   transform: rotate(45deg);
   transform-origin: right center;
 }
-.c-service-card:hover .c-service-card__arrow {
+.c-service-card:hover .c-service-card__arrow, .c-service-card:focus-visible .c-service-card__arrow {
   transform: translateX(0.5rem);
 }
 

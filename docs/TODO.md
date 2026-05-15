@@ -2,12 +2,19 @@
 
 ## 次回すぐやる
 
-- [ ] **p-form のラベルと input の縦位置調整（持ち帰り）**：align-items: center + label padding-block 1.6rem + input margin-block 2rem で対応中、実機で違和感が残るため再検討
 - [ ] 実機での全体見た目確認・微調整
   - `--sports` の illust 縦位置（現状 `align-items: center`、mock との差分要確認）
   - 各セクション間の `gap`・余白バランス
   - text の `height` で 4 行目の頭が見えていないか確認
 - [ ] media / temp / placement / care の 4 Modifier 集約検討（同値なので DRY 化可能、ただし将来の分岐余地とのトレードオフ）
+
+## レビュー後の検討候補
+
+- [ ] `pages/aboutus.html` Google Map ボタン × 3 のリンク先決定（現状 `href="#"`、住所プレースホルダのため保留中）
+- [ ] `pages/news-detail.html` 「次の記事」リンクの仕様決定（最新記事の場合の分岐ロジック、現状 `href="#"`）
+- [ ] 全ページ `<title>` の命名統一（現状サブページはシンプル、トップは「Best Life模写」。サイト名付き例：`会社案内 | ベストライフなんば`）
+- [ ] iframe（Google Maps）に `title` 属性付与（アクセシビリティ）
+- [ ] page-header 系メインビジュアル画像の `alt` 見直し（装飾でない画像は意味のある alt を当てる）
 
 ## SCSS 実装予定
 

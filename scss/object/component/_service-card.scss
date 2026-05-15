@@ -55,7 +55,8 @@
         }
     }
 
-    &:hover &__arrow{
+    &:hover &__arrow,
+    &:focus-visible &__arrow{
         transform: translateX(0.5rem);
     }
 

@@ -1,5 +1,36 @@
 # 作業ログ
 
+## 2026-05-15
+
+- ワークスペース全体レビュー対応：未対応ダミーリンクの修正・デッドコード削除
+  - 全 7 ページの footer logo `<a href="#">` → ホームページへ（index.html / `../index.html`）
+  - 全 7 ページの footer 「ホーム」 → ホームページへ
+  - 全 7 ページの footer 「会社案内」 → aboutus.html / `pages/aboutus.html`
+  - `index.html` の `c-btn 会社案内` ボタン `href="#"` → `pages/aboutus.html`
+  - `pages/news-detail.html` の関連記事 `c-news-card__link` × 3 のダミー `href="#"` → `news-detail.html` 統一
+  - 保留：`pages/aboutus.html` の Google Map ボタン × 3（住所プレースホルダのため）、`pages/news-detail.html` の「次の記事」（リンク先存在せず）
+  - `scss/layout/_main.scss` 削除（空ファイル、`style.scss` 未参照のデッドコード）
+  - `scss/foundation/_base.scss` から `$color-black: #000000` 削除（SCSS 内 0 箇所使用）
+  - `$color-text: #333333` を `_base.scss` に新設、本文テキスト色の 5 箇所のリテラルを変数化（`_related.scss` / `_policy.scss` × 2 / `_tel.scss` × 2）
+  - `_policy.scss` には `@use "../../foundation/base" as b;` が抜けていたので併せて追加
+  - `index.html` の `<main class="l-main">` → `<main>`（CSS 定義のないクラスを削除、子 6 ページに揃える）
+- `pages/contact.html`：テキスト入力系ラベルの `<label for>` → `<p>` / `<span>` 変換（cursor: pointer 抑止）
+  - 対象 9 ラベル：お問い合わせ項目 / 御社名 / 姓・名 / セイ・メイ / メールアドレス / メールアドレス（再入力）/ ご相談内容
+  - 主ラベルは `<p class="p-form__label">`、`__group` 内のサブラベルは `<span class="p-form__sub-label">`
+  - プライバシーポリシー同意の checkbox 用 `<label for="privacy">` は維持（チェックボックスはラベルクリックでトグルできる UX が業界標準のため）
+  - SCSS は無変更（既存の `__label` / `__sub-label` ルールはタグ非依存）
+- `pages/service.html` 8 セクションに `id` 属性追加（既存 Modifier 名と一致：sports / business / promotion / media / region / temp / placement / care）
+- `index.html` の `c-service-card` × 8 を `<div>` → `<a class="c-service-card" href="pages/service.html#xxx">` に変換
+- `pages/service.html` 上部の `c-service-card` × 8 を `<a class="c-service-card" href="#xxx">` に変換（同ページ内アンカー）
+- `js/main.js` 新規作成（jQuery 3.7.1 によるスムーズスクロール）
+  - ロード時 hash 検知：ブラウザの即時ジャンプを `scrollTop(0)` で打ち消し → `setTimeout` 経由で 600ms アニメ
+  - クリック時：`a[href*="#"]:not([href="#"])` 全般を捕捉、`history.pushState` で URL hash 反映後にスクロール
+  - ダミー `href="#"` は除外（footer の「ホーム」「会社案内」等の動作を温存）
+- `pages/service.html` `</body>` 直前に jQuery CDN（SRI ハッシュ付）+ `../js/main.js` の `<script>` 追加
+- `scss/object/component/_service-card.scss`：`:focus-visible` 時も矢印が動くよう `:hover` のセレクタに追加（キーボード操作時の視覚フィードバック）
+- destyle.css 確認：`a` は `text-decoration: none` / `color: inherit` リセット済 → SCSS 側の追加リセット不要
+- `pages/news.html` の `c-news-card__link` × 12 のダミー `href="#"` → `news-detail.html` に統一
+
 ## 2026-05-14
 
 - `pages/privacy-policy.html` 新規作成（プライバシーポリシーページ、最終ページ）
